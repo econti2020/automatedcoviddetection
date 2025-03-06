@@ -5,7 +5,7 @@
     Project Documents
 {% endblock title %}
 
-{% block content %}
+{% block body %}
 
     <div class="card mx-auto mt-5 col-md-6">
         <div class="card-body shadow">
@@ -41,8 +41,9 @@
                 <div class="card h-100 shadow">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Plan (Sep 4)</h5>
-                        <a href="" class="btn btn-primary d-block mb-2"  role="button"> Plan </a>
-                        <a href="/media/documents/Project Plan Fall 2024 Presentation.pdf" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
+                        <a href="{% url 'main:open_file' projectPlan %}" class="btn btn-primary d-block mb-2"  role="button" target="_blank"> Plan </a>
+                        <a href="{% url 'main:open_file' projectPlanPres %}" class="btn btn-primary d-block mb-2" role="button" target="_blank"> Presentation </a>
+                        <!-- <a href="/media/documents/Project Plan Fall 2024 Presentation.pdf" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a> -->
                     </div>
                 </div>
             </div>
@@ -54,19 +55,20 @@
                         <h5 class="card-title fw-bold">Milestone 1 (Sep 30)</h5>
                         <a href="" class="btn btn-primary d-block mb-2"  role="button"> Requirement </a>
                         <a href="" class="btn btn-primary d-block mb-2"  role="button"> Design </a>
-                        <a href="" class="btn btn-primary d-block mb-2"  role="button"> Test </a>
-                        <a href="/media/documents/Milestone One Fall 2024 Senior Design.pdf" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
-                        <a href="/media/documents/Milestone One Progress Evaluation.pdf" class="btn btn-primary d-block"  role="button"> Progress Evaluation </a>
+                        <a href="{% url 'main:open_file' webTesting %}" class="btn btn-primary d-block mb-2"  role="button"> Test </a>
+                        <a href="{% url 'main:open_file' milestone1Pres %}" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
+                        <a href="{% url 'main:open_file' milestone1Eval %}" class="btn btn-primary d-block"  role="button"> Progress Evaluation </a>
                     </div>
                 </div>
             </div>
+
             <!-- Milestone 2 -->
             <div class="col-md-3">
                 <div class="card h-100 shadow">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Milestone 2 (Oct 28)</h5>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Presentation </a>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Design Document </a>
+                        <a href="{% url 'main:open_file' milestone2Pres %}" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
+                        <a href="{% url 'main:open_file' milestone2Eval %}" class="btn btn-primary d-block mb-2"  role="button"> Progress Evaluation </a>
                     </div>
                 </div>
             </div>
@@ -76,8 +78,8 @@
                 <div class="card h-100 shadow ">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Milestone 3 (Nov 25)</h5>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Presentation </a>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Design Document </a>
+                        <a href="{% url 'main:open_file' milestone3Pres %}" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
+                        <a href="{% url 'main:open_file' milestone3Eval %}" class="btn btn-primary d-block mb-2"  role="button"> Progress Evaluation </a>
                     </div>
                 </div>
             </div>
@@ -93,8 +95,8 @@
                 <div class="card h-100 shadow">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Plan (Jan)</h5>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Plan </a>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Presentation </a>
+                        <a href="{% url 'main:open_file' projectPlan2 %}" class="btn btn-primary d-block mb-2" role="button"> Plan </a>
+                        <a href="{% url 'main:open_file' projectPlan2Pres %}" class="btn btn-primary d-block mb-2" role="button"> Presentation </a>
                     </div>
                 </div>
             </div>
@@ -104,8 +106,8 @@
                 <div class="card h-100 shadow ">
                     <div class="card-body ">
                         <h5 class="card-title fw-bold">Milestone 4 (Feb)</h5>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Presentation </a>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Design Document </a>
+                        <a href="{% url 'main:open_file' milestone4Pres %}" class="btn btn-primary d-block mb-2"  role="button"> Presentation </a>
+                        <a href="{% url 'main:open_file' milestone4Eval %}" class="btn btn-primary d-block mb-2"  role="button"> Progress Evaluation </a>
                     </div>
                 </div>
             </div>
@@ -116,7 +118,7 @@
                         <h5 class="card-title fw-bold">Milestone 5 (Mar)</h5>
                         <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Poster </a>
                         <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Presentation </a>
-                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Design Document </a>
+                        <a href="" class="btn btn-primary d-block mb-2 disabled"  role="button" aria-disabled="true"> Progress Evaluation </a>
                     </div>
                 </div>
             </div>
@@ -142,4 +144,4 @@
 
 
 
-{% endblock content %}
+{% endblock body %}
